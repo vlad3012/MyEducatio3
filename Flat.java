@@ -1,8 +1,12 @@
 package json;
 
+import java.util.List;
+
 public class Flat {
     private int roomSpace;
-    private Rooms rooms;
+    private int roomSpace2;
+    private int roomSpace3;
+    private List<String> rooms;
 
     public int getRoomSpace() {
         return roomSpace;
@@ -12,30 +16,38 @@ public class Flat {
         this.roomSpace = roomSpace;
     }
 
-    public Rooms getRooms() {
+    public int getRoomSpace2() {
+        return roomSpace2;
+    }
+
+    public void setRoomSpace2(int roomSpace2) {
+        this.roomSpace2 = roomSpace2;
+    }
+
+    public int getRoomSpace3() {
+        return roomSpace3;
+    }
+
+    public void setRoomSpace3(int roomSpace3) {
+        this.roomSpace3 = roomSpace3;
+    }
+
+    public List<String> getRooms() {
         return rooms;
     }
 
-    public void setRooms(Rooms rooms) {
+    public void setRooms(List<String> rooms) {
         this.rooms = rooms;
     }
 
-    public void say() {
-        System.out.println("My Apartment");
-        System.out.println(getRoomSpace()+"," +  getRooms().getName());
-    }
-
-
- static class Rooms {
-        private String name;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
+    @Override
+    public String toString() {
+        return "Flat{" +
+                "roomSpace=" + roomSpace +
+                ", roomSpace2=" + roomSpace2 +
+                ", roomSpace3=" + roomSpace3 +
+                ", rooms=" + rooms +
+                '}';
     }
 }
 
